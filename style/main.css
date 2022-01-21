@@ -1,0 +1,532 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+
+
+    /* background-color: #fdfdfe; */
+}
+
+html, body{
+    font-family: Arial, Helvetica, sans-serif;
+    /* position: relative; */
+    width: 100%;
+}
+
+
+ol,ul {
+    list-style:none;
+}
+a{
+    text-decoration: none;
+}
+
+.header-container{
+    padding: 2% 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bolder;
+    /* color: #242f51; */
+    
+}
+
+.nav__list{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__list li:not(:first-child){
+    padding-left: 2.2rem;
+}
+
+header a{
+    /* color: #551A8B; */
+    color: rgb(33,44,121);
+}
+
+.contact__me{
+    padding: 1em 3em;
+    border-radius: 3em;
+    color: white;
+    background: rgb(161,136,231);
+}
+
+main{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 7%;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.name{
+    display: flex;
+    align-items: center;
+
+}
+
+.name_body{
+    display: inline;
+    text-align: center;
+    font-weight: bold;
+    margin: -35px;
+    padding: 8px 70px;
+    border-radius: 2rem;
+    z-index: 0;
+    background-color: #e2eaed;
+}
+
+.verified{
+    z-index: 1;
+
+}
+
+.verified, .verified img{
+    background: none;
+}
+
+.profile{
+    margin: 2rem 0;
+    font-size: 2em;
+}
+
+.short_bio{
+    width: 85%;
+    font-size: 1.2rem;
+}
+
+main .contact__me{
+    width: 12em;
+    text-align: center;
+    margin: 2em 0;
+
+}
+main .contact__me a{
+    color: white;
+}
+
+.main-right img{
+    height: 450px;
+}
+
+.footer img{
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+
+}
+
+/* ANimation*/
+
+.purp-circle{
+    border-radius: 30%;
+    width: 20px;
+    height: 20px;
+    border: 5px solid #d6cffe;
+    position: absolute;
+    left: 40px;
+    animation: rotate 5s normal linear infinite;
+}
+
+
+@keyframes rotate {
+    0% {
+      transform: rotate3d(0, 0, 1, 0deg);
+    }
+    25% {
+      transform: rotate3d(0, 0, 1, 90deg);
+    }
+    50% {
+      transform: rotate3d(0, 0, 1, 180deg);
+    }
+    75% {
+      transform: rotate3d(0, 0, 1, 270deg);
+    }
+    100% {
+      transform: rotate3d(0, 0, 1, 360deg);
+    }
+  }
+  
+
+  .outer_circle { 
+    position: relative;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ffffff;
+} 
+
+.orang-circle{
+    position: absolute;
+    left: 500px;
+    top: 240px;
+}
+  
+.inner_circle { 
+    background-image: linear-gradient(to bottom, rgb(255, 99, 110)0%, rgb(250,141,108)100%);
+    content: '';
+    position: absolute;
+    top: -5px;
+    bottom: -5px;
+    right: -5px;
+    left: -5px;
+    z-index: -1;
+    border-radius: inherit;
+} 
+
+
+@media only screen and (max-width: 650px) {
+    .header-container{
+        flex-direction: column;
+        padding: 8% 0;
+    }
+    .nav-left img{
+        padding-bottom: 25px
+    }
+
+    .footer{
+        position: relative;
+    }
+
+    main{
+        flex-direction: column;
+    }
+    .main-right img{
+        height: 250px;
+    }
+    header .contact__me{
+        padding: 0;
+        background: none;
+        color: #551A8B;
+
+    }
+    header a{
+        color: #551A8B;
+    }
+    .short_bio {
+        width: 90%;
+        font-size: 1rem;
+    }
+    .purp-circle{
+        left: 292px;
+        top: 152px;
+    }
+
+    .orang-circle{
+        left: 200px;
+        width: fit-content;
+        margin: 0;
+        top: 226px;
+        position: absolute;
+    }
+}
+
+
+
+
+/* .circle {
+    display: block;
+    animation: spin 1000s linear infinite, moveLeftToRight 10s linear infinite;
+    transition: all 5s ease;
+    position: absolute;
+    left: 0;
+  }
+  
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  } */
+
+  /* Move sphere from left to right */
+
+  /* @keyframes moveLeftToRight {
+    0%   { left: -100px; }
+    100% { left: 98%; }
+  } */
+
+/*PreLoader CSS  */
+
+/* PreLoader CSS */
+.pre-loader{
+    width: 100%;    
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #ffff;
+    z-index: 2;
+}
+*,
+*:before, 
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -100px;
+    width: 200px;
+    height: 200px;
+    background-color: transparent;
+    border: none;
+    -webkit-user-select: none;
+}
+.wrapper .box-wrap {
+    width: 70%;
+    height: 70%;
+    margin: calc((100% - 70%)/2) calc((100% - 70%)/2);
+    position: relative;
+    transform: rotate(-45deg);
+}
+.wrapper .box-wrap .box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(135, 0, 0, .6);
+    background: linear-gradient(to right, #141562, #486fbc, #eab5a1, #8dd6ff, #4973c9, #d07ca7, #f4915e, #f5919e, #b46f89, #141562, #486fbc);
+    background-position: 0% 50%;
+    background-size: 1000% 1000%;
+    visibility: hidden;
+}
+.wrapper .box-wrap .box.one {
+    animation: moveGradient 15s infinite, oneMove 3.5s infinite;
+}
+.wrapper .box-wrap .box.two {
+    animation: moveGradient 15s infinite, twoMove 3.5s 0.15s infinite;
+}
+.wrapper .box-wrap .box.three {
+    animation: moveGradient 15s infinite, threeMove 3.5s 0.3s infinite;
+}
+.wrapper .box-wrap .box.four {
+    animation: moveGradient 15s infinite, fourMove 3.5s 0.575s infinite;
+}
+.wrapper .box-wrap .box.five {
+    animation: moveGradient 15s infinite, fiveMove 3.5s 0.725s infinite;
+}
+.wrapper .box-wrap .box.six {
+    animation: moveGradient 15s infinite, sixMove 3.5s 0.875s infinite;
+}
+@keyframes moveGradient {
+    to {
+        background-position: 100% 50%;
+   }
+}
+@keyframes oneMove {
+    0% {
+        visibility: visible;
+        clip-path: inset(0% 35% 70% round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    14.2857% {
+        clip-path: inset(0% 35% 70% round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    28.5714% {
+        clip-path: inset(35% round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    42.8571% {
+        clip-path: inset(35% 70% 35% 0 round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    57.1428% {
+        clip-path: inset(35% 70% 35% 0 round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    71.4285% {
+        clip-path: inset(0% 70% 70% 0 round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    85.7142% {
+        clip-path: inset(0% 70% 70% 0 round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    100% {
+        clip-path: inset(0% 35% 70% round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+}
+@keyframes twoMove {
+    0% {
+        visibility: visible;
+        clip-path: inset(0% 70% 70% 0 round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    14.2857% {
+        clip-path: inset(0% 70% 70% 0 round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    28.5714% {
+        clip-path: inset(0% 35% 70% round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    42.8571% {
+        clip-path: inset(0% 35% 70% round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    57.1428% {
+        clip-path: inset(35% round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    71.4285% {
+        clip-path: inset(35% 70% 35% 0 round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    85.7142% {
+        clip-path: inset(35% 70% 35% 0 round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    100% {
+        clip-path: inset(0% 70% 70% 0 round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+}
+@keyframes threeMove {
+    0% {
+        visibility: visible;
+        clip-path: inset(35% 70% 35% 0 round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    14.2857% {
+        clip-path: inset(35% 70% 35% 0 round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    28.5714% {
+        clip-path: inset(0% 70% 70% 0 round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    42.8571% {
+        clip-path: inset(0% 70% 70% 0 round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    57.1428% {
+        clip-path: inset(0% 35% 70% round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    71.4285% {
+        clip-path: inset(0% 35% 70% round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    85.7142% {
+        clip-path: inset(35% round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    100% {
+        clip-path: inset(35% 70% 35% 0 round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+}
+@keyframes fourMove {
+    0% {
+        visibility: visible;
+        clip-path: inset(35% 0% 35% 70% round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    14.2857% {
+        clip-path: inset(35% 0% 35% 70% round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    28.5714% {
+        clip-path: inset(35% round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    42.8571% {
+        clip-path: inset(70% 35% 0% 35% round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    57.1428% {
+        clip-path: inset(70% 35% 0% 35% round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    71.4285% {
+        clip-path: inset(70% 0 0 70% round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    85.7142% {
+        clip-path: inset(70% 0 0 70% round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    100% {
+        clip-path: inset(35% 0% 35% 70% round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+}
+@keyframes fiveMove {
+    0% {
+        visibility: visible;
+        clip-path: inset(70% 0 0 70% round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    14.2857% {
+        clip-path: inset(70% 0 0 70% round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    28.5714% {
+        clip-path: inset(35% 0% 35% 70% round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    42.8571% {
+        clip-path: inset(35% 0% 35% 70% round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    57.1428% {
+        clip-path: inset(35% round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    71.4285% {
+        clip-path: inset(70% 35% 0% 35% round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    85.7142% {
+        clip-path: inset(70% 35% 0% 35% round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    100% {
+        clip-path: inset(70% 0 0 70% round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+}
+@keyframes sixMove {
+    0% {
+        visibility: visible;
+        clip-path: inset(70% 35% 0% 35% round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    14.2857% {
+        clip-path: inset(70% 35% 0% 35% round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    28.5714% {
+        clip-path: inset(70% 0 0 70% round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    42.8571% {
+        clip-path: inset(70% 0 0 70% round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    57.1428% {
+        clip-path: inset(35% 0% 35% 70% round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    71.4285% {
+        clip-path: inset(35% 0% 35% 70% round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    85.7142% {
+        clip-path: inset(35% round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+    100% {
+        clip-path: inset(70% 35% 0% 35% round 5%);
+        animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+   }
+}

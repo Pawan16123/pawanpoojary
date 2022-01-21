@@ -1,0 +1,125 @@
+main{
+    display: flex;
+    align-items: center;
+    font-family: "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: 490;
+    padding-bottom: 30px;
+}
+
+main .svg svg{
+    height: 300px;
+    margin-top: 4rem;
+}
+header a{
+    /* color: rgb(161,136,231); */
+    color: rgb(33,44,121);
+}
+
+/* form */
+textarea {
+    resize: vertical; 
+}
+main .contact-me{
+    width: 90%;
+    height: 90%;
+}
+
+.contact-me input{
+    display: block;
+    padding: 5px;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 10px;
+    
+}
+
+main .contact-me {
+    width: 35%;
+}
+
+.contact-me #message, .contact-me #file{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.contact-me span {
+    color: red;
+}
+
+.contact-me label{
+    font-size: 15px;
+}
+main .svg{
+    margin-right: 20px;
+}
+.contact-me #file{
+    padding-left: 0;
+}
+.contact-me button{
+    display: block;
+    width: 240px;
+    height: 30px;
+    background: rgb(161,136,231);
+    box-shadow: none;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bolder;
+    margin: 0 auto;
+}
+.contact-me form{
+    padding: 20px;
+    
+}
+
+path{
+  fill: rgb(161,136,231);
+}
+
+/* svg animation */
+/* #phone-call {
+    animation: callme 1.5s ease-in infinite alternate;
+}
+
+@keyframes callme{
+    0%{
+        transform: rotate(1deg)
+    
+    }
+
+    100%{
+        transform: scale(361deg)
+
+    }
+} */
+
+
+@media only screen and (max-width: 650px) {
+
+    main .contact-me {
+        width: 80%;
+    }
+    main .svg svg {
+        /* height: 300px; */
+        margin-top: 0;
+        width: fit-content;
+    }
+    
+}
+
+/* Form CSS */
+
+form {
+    box-shadow: 0px 1px 11px 0px #e4e0e9;
+}
+
+input:not(input[type=file]){
+    border: none;
+    border-bottom : 1px solid black;
+}
+
+input::placeholder{
+    color: white;
+}
