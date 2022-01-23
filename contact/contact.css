@@ -1,3 +1,6 @@
+input:focus{
+    outline: none;
+}
 main{
     display: flex;
     align-items: center;
