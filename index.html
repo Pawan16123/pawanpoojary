@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#A188E7"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pawan Poojary - Portfolio</title>
     <link rel="icon" href="./images/PP.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="./style/main.css">
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+    <link rel="manifest" href="manifest.json">
     <script src="./script/main.js"></script>
 
 </head>
@@ -73,5 +75,10 @@
         <img src="./images/city_shade.png" alt="city_shade">
     </section>
 
+    <script>
+        if('serviceWorker' in navigator){
+            navigator.serviceWorker.register('/service-worker.js');
+        }
+    </script>
 </body>
 </html>
